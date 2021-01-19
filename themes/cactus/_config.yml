@@ -62,7 +62,7 @@ post:
 # Customize the copyright years
 # Note: if start_year/end_year not provided, will use current year.
 copyright:
-  start_year: 2021
+  start_year: 2020
   end_year: 2021
 
 ##############################################################################
@@ -115,7 +115,7 @@ favicon:
 colorscheme: classic
 
 # Maximal width of the page in rem units.
-page_width: 48
+page_width: 40
 
 
 ##############################################################################
@@ -123,7 +123,7 @@ page_width: 48
 ##############################################################################
 
 # Enable or disable the RSS feed.
-rss: false
+rss: true
 
 # Turn your web pages into graph objects (see http://ogp.me).
 open_graph:
