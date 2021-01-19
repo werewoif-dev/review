@@ -1,5 +1,5 @@
 ---
-title: {{ title }}
+title: 「Round x」{{ title }}
 date: {{ date }}
-tags:
+author: 
 ---

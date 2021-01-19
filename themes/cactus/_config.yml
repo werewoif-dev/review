@@ -14,10 +14,10 @@ direction: ltr
 # navigation menu. Optionally, you can add translations for the 'Key' in
 # languages/*.yml
 nav:
-  home: /
-  about: /about/
-  Docs (Github): https://github.com/memset0/werewolf-review
-  QQ Bot (Github): https://github.com/memset0/werewolf-bot
+  Home: /
+  Organizaion: https://github.com/werewoif-dev
+  Source: https://github.com/memset0/werewolf-review
+  QQ Bot: https://github.com/memset0/werewolf-bot
 
 
 # Links to your social media accounts.
@@ -42,7 +42,7 @@ tags_overview: false
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
-  post_count: 5
+  post_count: 10
   sort_updated: false
 
 # Customize the archive view.
