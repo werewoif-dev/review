@@ -1,3 +1,8 @@
+---
+author: memset0
+---
+
+#### 玩家列表
 1: lk
 2: djq_cpp
 3: dmy
