@@ -1,10 +1,8 @@
 name: Hexo Deploy
-
 on:
   push:
     branches:
       - master
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,9 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
       with:
-        submodules: true # Checkout private submodules(themes or something else).
-    
-    # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)
+        submodules: true
     - name: Cache node modules
       uses: actions/cache@v1
       id: cache
