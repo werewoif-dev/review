@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '12'
 
-      - name: Setup Hexo
+      - name: Setup SSH
         env:
           ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
         run: |
@@ -31,6 +31,10 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           git config --global user.email "memset0@outlook.com"
           git config --global user.name "memset0 (Github Actions)"
+          ssh-add ~/.ssh/id_rsa
+
+      - name: Setup Hexo
+        run: |
           npm install hexo-cli -g
           npm install
 
