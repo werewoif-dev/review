@@ -61,5 +61,9 @@
     <% } %>
     <% if (theme.rss) { %>
       <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml" />
-    <% } %>
+      <% } %>
+      
+    <!-- han.js -->
+    <link rel="stylesheet" media="all" href="<%= url_for("css/han.min.css") %>">
+    <!-- <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.3.0/han.min.css"> -->
 </head>
