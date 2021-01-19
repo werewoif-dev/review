@@ -26,17 +26,12 @@ jobs:
     - name: Install Dependencies
       if: steps.cache.outputs.cache-hit != 'true'
       run: npm ci
-    
-    # Deploy hexo blog website.
+    - name: Build
+      run: yarn build
     - name: Deploy
-      id: deploy
-      uses: sma11black/hexo-action@v1.0.3
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        deploy_key: ${{ secrets.HEXO_DEPLOY_KEY }}
-        user_name: memset0 # (or delete this input setting to use bot account)
-        user_email: memset0@outlook.com  # (or delete this input setting to use bot account)
-        commit_msg: ${{ github.event.head_commit.message }}  # (or delete this input setting to use hexo default settings)
-    # Use the output from the `deploy` step(use for test action)
-    - name: Get the output
-      run: |
-        echo "${{ steps.deploy.outputs.notify }}"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+        publish_branch: docs
+        force_orphan: true
